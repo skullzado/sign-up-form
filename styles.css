@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+	--full-perc: 100%;
+
+	--color-white: #fff;
+	--color-black: #000;
+	--color-fb-blue: #1877f2;
+}
+
 *,
 *::before,
 *::after {
@@ -7,8 +17,9 @@
 }
 
 html {
-	width: 100%;
-	height: 100%;
+	width: var(--full-perc);
+	height: var(--full-perc);
+	font-size: 62.5%;
 }
 
 body {
@@ -16,17 +27,24 @@ body {
 	height: 100vh;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: var(--util-size-md);
+	line-height: 1.6;
+}
+
+button,
+input {
+	font-family: inherit;
 }
 
 .container {
 	display: flex;
-	width: 100%;
-	height: 100%;
+	width: var(--full-perc);
+	height: var(--full-perc);
 }
 
+/* IMAGE SIDEBAR */
 .image-sidebar {
-	width: 30%;
-	height: 100%;
+	width: 40%;
 	position: relative;
 	background-image: url('./assets/images/timothy-meinberg-xqV9QdGOSas-unsplash.jpg');
 	background-repeat: no-repeat;
@@ -34,37 +52,148 @@ body {
 	background-size: cover;
 }
 
-.image-sidebar .logo-container {
-	width: 100%;
+/* LOGO CONTAINER */
+.logo-container {
+	width: var(--full-perc);
 	background-color: rgba(0, 0, 0, 0.4);
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	padding: 16px 0;
 	position: absolute;
-	top: 15%;
+	top: 20%;
+	padding: 2rem 0;
 }
 
-.image-sidebar .logo-container img {
-	width: 64px;
+.logo-container img {
+	width: 9.6rem;
 }
 
-.image-sidebar .logo-container figcaption {
-	font-size: 64px;
-	color: white;
+.logo-container h2 {
+	font-size: 6.4rem;
+	color: var(--color-white);
 }
 
-.image-sidebar .bg-container div {
-	width: 100%;
-	color: rgba(255, 255, 255, 0.6);
-	font-size: 10px;
-	position: absolute;
-	bottom: 16px;
-	left: 30%;
+/* BACKGROUND CREDITS */
+.bg-credits {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	font-size: 1.6rem;
+	height: var(--full-perc);
+	padding-bottom: 2rem;
+	color: var(--color-white);
 }
 
-.image-sidebar .bg-container div a {
+.bg-credits > a {
 	color: inherit;
 	font-weight: 700;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+	width: calc(var(--full-perc) - 40%);
+	display: flex;
+	flex-direction: column;
+}
+
+/* FORM HEADER */
+.form-header {
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	font-size: 2.4rem;
+	padding: 0 6rem;
+}
+
+.form-header p:not(p:first-of-type) {
+	margin-bottom: 2rem;
+}
+
+/* FORM CONTAINER */
+.form-container {
+	width: var(--full-perc);
+	padding: 4rem 6rem;
+	background-color: var(--color-white);
+	box-shadow: 0 1rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-container p {
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
+}
+
+.form-container form {
+	display: grid;
+	width: 60%;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 6rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group:not(:nth-last-of-type(-n + 2)) {
+	margin-bottom: 2rem;
+}
+
+.form-group label {
+	font-size: 1.4rem;
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+}
+
+.form-group input {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	outline: none;
+	padding: 0.8rem 2rem;
+	border-radius: 0.5rem;
+	font-size: 1.6rem;
+}
+
+.form-group input:focus {
+	border: 1px solid var(--color-fb-blue);
+	box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-container .error-label {
+	font-size: 1.2rem;
+	color: red;
+}
+
+/* ACTION CONTAINER */
+.action-container {
+	padding: 0 6rem;
+	margin-top: 4rem;
+	font-size: 1.4rem;
+}
+
+.btn {
+	padding: 1.2rem 4rem;
+	background-color: #596d48;
+	border: none;
+	border-radius: 0.8rem;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 2rem;
+	color: var(--color-white);
+	margin-bottom: 2rem;
+	box-shadow: 0 0.8rem 1rem 0 rgba(0, 0, 0, 0.1);
+	transition: background-color 0.2s;
+}
+
+.action-container > p > span > a {
+	color: #596d48;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.btn:hover {
+	background-color: rgba(255, 42, 188, 0.801);
+}
+
+input.error {
+	border: 1px solid red;
 }

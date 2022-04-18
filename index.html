@@ -16,52 +16,79 @@
 						alt="The Odin Project logo"
 						class="logo"
 					/>
-					<figcaption>ODIN</figcaption>
+					<h2>ODIN</h2>
 				</div>
-				<div class="bg-container">
-					<div>
-						Photo by
-						<a
-							href="https://unsplash.com/@timothymeinberg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-							>Timothy Meinberg</a
-						>
-						on
-						<a
-							href="https://unsplash.com/s/photos/heat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-							>Unsplash</a
-						>
-					</div>
+				<div class="bg-credits">
+					Photo by&nbsp;
+					<a
+						href="https://unsplash.com/@timothymeinberg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						>Timothy Meinberg</a
+					>
+					&nbsp;on&nbsp;
+					<a
+						href="https://unsplash.com/s/photos/heat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						>Unsplash</a
+					>
 				</div>
 			</div>
-
-			<!-- <div class="form-container">
-				<div class="form-header">FORM WELCOME</div>
-				<div class="form-main">
+			<div class="main-container">
+				<div class="form-header">
+					<p>
+						This is not a real online service! You know you need something like
+						this in your life to help you realize your deepest dreams.
+					</p>
+					<p>Sign up <em>now</em> to get started!</p>
+					<p>You <em>know</em> you want to.</p>
+				</div>
+				<div class="form-container">
+					<p>Let's do it!</p>
 					<form>
-						<label for="fname">First Name</label>
-						<input type="text" id="fname" name="fname" />
-						<label for="lname">Last Name</label>
-						<input type="text" id="lname" name="lname" />
-						<label for="email">Email</label>
-						<input type="email" id="email" name="email" />
-						<label for="phone">Phone Number</label>
-						<input type="tel" id="phone" name="phone" />
-						<label for="password">Password</label>
-						<input type="password" id="password" name="password" />
-						<label for="cpassword">Confirm Password</label>
-						<input type="password" id="cpassword" name="cpassword" />
+						<div class="form-group">
+							<label for="fname">First Name</label>
+							<input type="text" id="fname" name="fname" />
+						</div>
+						<div class="form-group">
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname" name="lname" />
+						</div>
+						<div class="form-group">
+							<label for="email">Email Address</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+						<div class="form-group">
+							<label for="phone">Phone Number</label>
+							<input type="number" id="phone" name="phone" />
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input
+								class="error"
+								type="password"
+								id="password"
+								name="password"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<label for="cpassword">Confirm Password</label>
+							<input
+								class="error"
+								type="password"
+								id="cpassword"
+								name="cpassword"
+								required
+							/>
+						</div>
+						<p class="error-label">* Passwords do not match</p>
 					</form>
 				</div>
-				<div class="form-footer">
-					<button class="btn">Create Account</button>
-					<div class="user-container">
-						<p class="login">
-							Already have an account?
-							<span class="login-link"><a href="#">Log in</a></span>
-						</p>
-					</div>
+				<div class="action-container">
+					<button class="btn" type="submit">Create Account</button>
+					<p>
+						Already have an account? <span><a href="#">Log in</a></span>
+					</p>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</body>
 </html>
